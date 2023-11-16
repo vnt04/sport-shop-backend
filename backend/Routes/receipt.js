@@ -4,7 +4,8 @@ const router = express.Router();
 
 const receiptController = require('../controllers/ReceiptController');
 
-router.get('/:slug', receiptController.add); 
+router.post('/store',receiptController.store);
+router.get('/store',receiptController.store);
 router.get('/', receiptController.receipt); 
 
 module.exports = router;

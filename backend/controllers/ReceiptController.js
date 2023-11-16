@@ -9,6 +9,9 @@ class ReceiptController{
     add(req,res){
         res.send('add receipt here!')
     }
+    store(req,res){
+        res.send('tesst');
+    }
 }
 
 
