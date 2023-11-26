@@ -5,6 +5,8 @@ const userRouter = require('./user')
 const categoryRouter = require('./category')
 const unitRouter = require('./unit')
 const productRouter = require('./product')
+const stockInRouter = require('./stockIn')
+const loginRouter = require('./login')
 
 function route(app){
     
@@ -16,6 +18,8 @@ function route(app){
     app.use('/category',categoryRouter);
     app.use('/unit',unitRouter);
     app.use('/product', productRouter);
+    app.use('/stockIn',stockInRouter);
+    app.use('/login',loginRouter);
     
 }
 
