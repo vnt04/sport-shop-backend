@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Supplier = new mongoose.Schema(
     {
-        tenNcc: { type: String, default: 'Diên Hồng Sport' },
+        tenNcc: { type: String, default: 'Trần Văn N' },
         manager: { type: String, default: 'Trần Văn N' },
         maThue: { type: String, default: '012345' },
         sdt: { type: String, default: '0981253214' },

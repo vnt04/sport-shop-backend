@@ -26,6 +26,23 @@ class SupplierController{
         .then(supplier => res.json(supplier))
         .catch(error => next(error));
     }
+
+    async delete(req, res, next) {
+    try {
+        const  id  = req.params.id; 
+        const deletedSupplier = await Supplier.deleteOne({_id: id})
+
+        if (!deletedSupplier) {
+            return res.status(404).json({ error: 'Supplier not found' });
+        }
+        res.json({ message: 'Supplier deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting data from MongoDB:', error);
+        res.status(500).json({ error: 'Failed to delete data from MongoDB' });
+    }
+    }
+    
+
 }
 
 module.exports = new SupplierController();
