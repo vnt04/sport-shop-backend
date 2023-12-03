@@ -9,6 +9,7 @@ const stockInRouter = require('./stockIn')
 const loginRouter = require('./login')
 const orderRouter = require('./order')
 const storeRouter = require('./store')
+const stockOutRouter = require('./stockOut')
 function route(app){
     
    
@@ -23,6 +24,7 @@ function route(app){
     app.use('/login',loginRouter);
     app.use('/order',orderRouter);
     app.use('/store',storeRouter);
+    app.use('/stockOut',stockOutRouter);
 }
 
 module.exports = route;
