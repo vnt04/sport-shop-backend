@@ -7,8 +7,9 @@ const Product = new mongoose.Schema(
         tenSP: String,
         gia:Number,
         slKho: Number,
-        dvt: String,
+        maDVT: String,
         maLoai: String,
+        state: String,
     }
 )
 

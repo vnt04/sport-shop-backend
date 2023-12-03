@@ -3,10 +3,6 @@ const mongoose = require('mongoose')
 
 const StockIn = new mongoose.Schema(
     {
-        maPhieu: {
-        type: String,
-        unique: true, // Đảm bảo maPhieu là duy nhất
-        },
         user: String,
         ngayNhap: String,
         tenNcc: String,
