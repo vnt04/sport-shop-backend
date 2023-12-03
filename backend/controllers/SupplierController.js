@@ -43,24 +43,24 @@ class SupplierController{
     }
     
     async update(req, res, next) {
-    try {
-        const  id  = req.params.id; 
-        const updateData = req.body;
-        const updatedSupplier = await Supplier.findOneAndUpdate(
-            { _id: id },
-            { $set: updateData },
-            { new: true } 
-        );
+        try {
+            const  id  = req.params.id; 
+            const updateData = req.body;
+            const updatedSupplier = await Supplier.findOneAndUpdate(
+                { _id: id },
+                { $set: updateData },
+                { new: true } 
+            );
 
-        if (!updatedSupplier) {
-            return res.status(404).json({ error: 'Supplier not found' });
-        }
+            if (!updatedSupplier) {
+                return res.status(404).json({ error: 'Supplier not found' });
+            }
 
-        res.json({ message: 'Supplier updated successfully', updatedSupplier });
-        } catch (error) {
-            console.error('Error updating data in MongoDB:', error);
-            res.status(500).json({ error: 'Failed to update data in MongoDB' });
-        }
+            res.json({ message: 'Supplier updated successfully', updatedSupplier });
+            } catch (error) {
+                console.error('Error updating data in MongoDB:', error);
+                res.status(500).json({ error: 'Failed to update data in MongoDB' });
+            }
     }
 
 }
